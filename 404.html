@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#07141c" />
+    <title>纸灯夜航 · Paper Lantern Night</title>
+    <script type="module" crossorigin src="./assets/index-Ezu-1xsH.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DRp47Lff.css">
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="c"></canvas>
+
+      <div id="vignette"></div>
+
+      <header id="hud" class="hidden" aria-live="polite">
+        <div class="hud-left">
+          <div class="hud-label">分数</div>
+          <div id="score" class="hud-value">0</div>
+          <div class="hud-sub">
+            <span>航程 <b id="dist">0</b></span>
+            <span>心愿 <b id="wishes">0</b></span>
+          </div>
+        </div>
+        <div class="hud-right">
+          <button id="btn-pause" class="icon-btn" type="button" aria-label="暂停">暂停</button>
+          <button id="btn-mute" class="icon-btn" type="button" aria-label="静音">音响</button>
+        </div>
+        <div id="burst-bar" title="升力">
+          <div id="burst-fill"></div>
+        </div>
+      </header>
+
+      <div id="title" class="overlay">
+        <div class="title-card">
+          <p class="eyebrow">夜市 · 风灯 · 无尽</p>
+          <h1>纸灯夜航</h1>
+          <p class="subtitle">Paper Lantern Night</p>
+          <p class="flavor">风托着灯，灯托着愿。穿过牌坊，躲开烟火，接住漂来的签条。</p>
+          <button id="btn-play" type="button">启航</button>
+          <p id="best-line" class="best hidden">最高 <span id="best">0</span></p>
+          <p class="hint">鼠标 / WASD 倾侧　空格升力　触屏拖拽</p>
+        </div>
+      </div>
+
+      <div id="pause" class="overlay hidden">
+        <div class="panel">
+          <h2>暂停</h2>
+          <button id="btn-resume" type="button">继续</button>
+        </div>
+      </div>
+
+      <div id="crash" class="overlay hidden">
+        <div class="panel">
+          <p class="eyebrow">纸灯熄了</p>
+          <h2>航程止于此</h2>
+          <p class="crash-score">分数 <b id="final-score">0</b></p>
+          <p class="crash-best">最高 <span id="final-best">0</span></p>
+          <button id="btn-retry" type="button">再飞一次</button>
+          <p class="hint">按 R 或轻点重开</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
